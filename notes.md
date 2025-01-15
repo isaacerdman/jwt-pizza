@@ -8,7 +8,7 @@ As part of `Deliverable ⓵ Development deployment: JWT Pizza`, start up the app
 | --------------------------------------------------- | ------------------ | ----------------- | ------------ |
 | View home page                                      |        home.tsx            |       none           |    none          |
 | Register new user<br/>(t@jwt.com, pw: test)         |        register.tsx            |         [POST] /api/auth          |  INSERT INTO user (name, email, password) VALUES (?, ?, ?)<br/>INSERT INTO userRole (userId, role, objectId) VALUES (?, ?, ?)|
-| Login new user<br/>(t@jwt.com, pw: test)            |         login.tsx           |        [PUT] /api/auth           |      SELECT * FROM user WHERE email=?<br/>SELECT * FROM userRole WHERE userId=?<br/>INSERT INTO auth (token, userId) VALUES (?, ?)         |
+| Login new user<br/>(t@jwt.com, pw: test)            |         login.tsx           |        [PUT] /api/auth           |      SELECT * FROM user WHERE email=?<br/>SELECT * FROM userRole WHERE userId=?<br/>INSERT INTO auth (token, userId) VALUES (?, ?)<br/>INSERT INTO auth (token, userId) VALUES (?, ?)         |
 | Order pizza                                         |          payment.tsx          |         [POST] /api/order          |      INSERT INTO dinerOrder (dinerId, franchiseId, storeId, date) VALUES (?, ?, ?, now())<br/>INSERT INTO orderItem (orderId, menuId, description, price) VALUES (?, ?, ?, ?)<br/>        |
 | Verify pizza                                        |         delivery.tsx           |         [POST] /api/order/verify          |   none           |
 | View profile page                                   |           dinerDashboard.tsx         |          [GET] /api/order         |    none          |
