@@ -145,6 +145,8 @@ export default function App() {
     window.HSStaticMethods.autoInit();
   }, [location.pathname]);
   //...
+
+[![CI Pipeline](https://github.com/YOURACCOUNTNAMEHERE/jwt-pizza/actions/workflows/ci.yml/badge.svg)](https://github.com/isaacerdman/jwt-pizza/actions/workflows/ci.yml)
 ```
 
 ### Icons
